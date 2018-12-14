@@ -7,13 +7,14 @@ public class Main {
 
     public static void main(String[] args) {
         int selectedNumber = readNumber();
-        String message = sum2(selectedNumber);
+        int userNum = readNumber();
+        String message = sum(selectedNumber, userNum);
         print(message);
     }
 
-    private static String sum2(int number) {
-        int result = 2 + number;
-        return "2 + " + number + " = " + result;
+    private static String sum(int number, int number2) {
+        int result = number + number2;
+        return number + " + " + number2 + " = " + result;
     }
 
     private static int readNumber() {
