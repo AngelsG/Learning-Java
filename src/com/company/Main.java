@@ -11,13 +11,9 @@ public class Main {
         print(message);
     }
 
-    private static String sum2(int selectedNumber) {
-        int result = 2 + selectedNumber;
-        return "2 + " + selectedNumber + " = " + result;
-    }
-
-    private static void print(String message) {
-        System.out.println(message);
+    private static String sum2(int number) {
+        int result = 2 + number;
+        return "2 + " + number + " = " + result;
     }
 
     private static int readNumber() {
@@ -26,6 +22,10 @@ public class Main {
 
     private static String readLine(InputStream in) {
         return new Scanner(in).nextLine();
+    }
+
+    private static void print(String message) {
+        System.out.println(message);
     }
 }
 
