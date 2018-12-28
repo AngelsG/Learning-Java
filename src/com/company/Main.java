@@ -1,6 +1,5 @@
 package com.company;
 
-import java.io.InputStream;
 import java.util.Scanner;
 
 public class Main {
@@ -11,15 +10,21 @@ public class Main {
         print("Escriu un numero:");
 
         int number = readNumber();
+        print("vols multiplicar (BOTO_NUM_1) o sumar(BOTO_NUM_2)?");
 
-        if(multiply(3) == NO_ES_POT_FER){
-            print("No es pot fer");
+        int number2 = readNumber();
+        if (number2 == 1) {
+            if (multiplyBy3(number) == NO_ES_POT_FER) {
+                print("No es pot fer");
+            } else {
+                print("El teu numero es = " + multiplyBy3(number) + "...");
+            }
         } else {
-            print("El teu numero es = " + multiply(number) + "...");
+            print("" + (number2 + 3));
         }
     }
 
-    private static int multiply(int num) {
+    private static int multiplyBy3(int num) {
         int result = num * 3;
         if (result > 10) {
             return NO_ES_POT_FER;
@@ -34,7 +39,8 @@ public class Main {
     }
 
     private static String readLine() {
-        return new Scanner(System.in).nextLine();
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
 
     private static void print(String message) {
