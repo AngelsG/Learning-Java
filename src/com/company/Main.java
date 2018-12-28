@@ -5,24 +5,36 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static final int NO_ES_POT_FER = -1;
+
     public static void main(String[] args) {
-        int selectedNumber = readNumber();
-        int userNum = readNumber();
-        String message = sum(selectedNumber, userNum);
-        print(message);
+        print("Escriu un numero:");
+
+        int number = readNumber();
+
+        if(multiply(3) == NO_ES_POT_FER){
+            print("No es pot fer");
+        } else {
+            print("El teu numero es = " + multiply(number) + "...");
+        }
     }
 
-    private static String sum(int number, int number2) {
-        int result = number + number2;
-        return number + " + " + number2 + " = " + result;
+    private static int multiply(int num) {
+        int result = num * 3;
+        if (result > 10) {
+            return NO_ES_POT_FER;
+        } else {
+            return result;
+        }
     }
 
     private static int readNumber() {
-        return Integer.parseInt(readLine(System.in));
+        String line = readLine();
+        return Integer.parseInt(line);
     }
 
-    private static String readLine(InputStream in) {
-        return new Scanner(in).nextLine();
+    private static String readLine() {
+        return new Scanner(System.in).nextLine();
     }
 
     private static void print(String message) {
