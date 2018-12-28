@@ -24,7 +24,7 @@ public class Main {
         }
     }
 
-    private static int multiplyBy3(int num) {
+    public static int multiplyBy3(int num) {
         int result = num * 3;
         if (result > 10) {
             return NO_ES_POT_FER;
