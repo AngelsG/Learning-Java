@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Pairing {
     public static void main(String[] args) {
@@ -11,8 +12,9 @@ public class Pairing {
         interviwers.add("David");
         interviwers.add("Tom");
 
+        int randomPerson = new Random().nextInt(4);
 
-        System.out.print(interviwers.get(0));
+        System.out.print(interviwers.get(randomPerson));
 
     }
 }
