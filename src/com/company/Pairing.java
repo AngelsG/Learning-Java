@@ -8,7 +8,11 @@ public class Pairing {
         List<String> interviwers = new ArrayList<String>();
         interviwers.add("John");
         interviwers.add("Jane");
+        interviwers.add("David");
+        interviwers.add("Tom");
 
-        interviwers.forEach(System.out::println);
+
+        System.out.print(interviwers.get(0));
+
     }
 }
