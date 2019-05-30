@@ -42,7 +42,6 @@ public class CalculadoraInfinita {
                     break;
                 case 5:
                     System.out.println("Has salido del programa");
-                    break;
                 default:
                     System.out.println("Opcion no es posible");
 
